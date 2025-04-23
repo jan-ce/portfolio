@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Jhansi Lakshmi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Roboto Mono', monospace;
+      color: white;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #3a0ca3);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .sitename {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(255,255,255,0.3);
+    }
+
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 95px;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: #ff005c;
+    }
+
+    .about-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px 0;
+    }
+
+    .about-section h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      line-height: 1.8;
+      color: #f5f5f5;
+    }
+
+    .skills-section {
+      margin-top: 50px;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      max-width: 1000px;
+      width: 80%;
+      text-align: center;
+    }
+
+    .skills-section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #ffffff;
+      font-size: 1.2rem;
+      max-width: 150px;
+      text-align: center;
+    }
+
+    .skill-item i {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: 40px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="sitename">Jhansi Lakshmi</h1>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="about-root"></div>
+
+  <script>
+    const aboutContent = `
+      <div class="about-section">
+        <h1>About Me</h1>
+        <p>
+          I'm Jhansi Lakshmi, a Full Stack Developer with a passion for building robust, scalable web applications and cloud-native solutions.
+          With experience in Spring Boot, React, Docker, and AWS, I love turning complex problems into clean, efficient code. I'm driven by collaboration, continuous learning, and a belief that great tech should solve real-world problems.
+          Whether it's crafting elegant front-ends or engineering resilient back-end systems, I bring both creativity and precision to everything I build.
+        </p>
+      </div>
+      
+      <div class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div class="skill-item">
+            <i class="bi bi-code-slash"></i>
+            <p>Programming Languages: Java, Python, JavaScript, TypeScript</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-braces"></i>
+            <p>Front-End: Angular, React, Redux, Bootstrap, jQuery, AJAX, JSON, HTML5, CSS3, SASS</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-gear"></i>
+            <p>Back-End: Spring Boot, Spring MVC, Hibernate, JPA, Node.js, RESTful APIs, SOAP, Microservices</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-database"></i>
+            <p>Databases: MySQL, PostgreSQL, MongoDB, Oracle</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-cloud"></i>
+            <p>Cloud Platforms: AWS, Azure, Google Cloud, Kubernetes</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-git"></i>
+            <p>Version Control: Git, GitHub, Jira, IntelliJ IDEA, VSCode</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-shield-lock"></i>
+            <p>Security: OAuth 2.0, JWT, SSL/TLS Encryption, Spring Security</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-check-circle"></i>
+            <p>Testing: JUnit, Mockito, Selenium, Postman, Cypress</p>
+          </div>
+          <div class="skill-item">
+            <i class="bi bi-puzzle"></i>
+            <p>Architecture: Microservices, MVC, RESTful services</p>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('about-root').innerHTML = aboutContent;
+  </script>
+
+</body>
+</html>

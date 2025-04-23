@@ -73,18 +73,26 @@
 </head>
 <body>
 
-  <div class="about-section">
-    <h1>About Me</h1>
-    <p>
-      I'm Jhansi Lakshmi, a Full Stack Developer with a passion for building robust, scalable web applications and cloud-native solutions.
-      With experience in Spring Boot, React, Docker, and AWS, I love turning complex problems into clean, efficient code. I'm driven by collaboration, continuous learning, and a belief that great tech should solve real-world problems.
-      Whether it's crafting elegant front-ends or engineering resilient back-end systems, I bring both creativity and precision to everything I build.
-    </p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/jhansikommalapati" target="_blank"><i class="bi bi-linkedin"></i></a>
-      <a href="mailto:jhansikommalapati45@gmail.com"><i class="bi bi-envelope"></i></a>
-    </div>
-  </div>
+  <div id="about-root"></div>
+
+  <script>
+    const aboutContent = `
+      <div class="about-section">
+        <h1>About Me</h1>
+        <p>
+          I'm Jhansi Lakshmi, a Full Stack Developer with a passion for building robust, scalable web applications and cloud-native solutions.
+          With experience in Spring Boot, React, Docker, and AWS, I love turning complex problems into clean, efficient code. I'm driven by collaboration, continuous learning, and a belief that great tech should solve real-world problems.
+          Whether it's crafting elegant front-ends or engineering resilient back-end systems, I bring both creativity and precision to everything I build.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/jhansikommalapati" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:jhansikommalapati45@gmail.com"><i class="bi bi-envelope"></i></a>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('about-root').innerHTML = aboutContent;
+  </script>
 
 </body>
 </html>

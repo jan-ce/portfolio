@@ -1,215 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Jhansi Lakshmi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    html, body {
+      min-height: 100%;
+      font-family: 'Roboto Mono', monospace;
+      color: white;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #3a0ca3);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      scroll-behavior: smooth;
+    }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+       backdrop-filter: blur(6px); 
+      transition: all 0.3s ease-in-out;
+    }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    .sitename {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(255,255,255,0.3);
+    }
 
- 
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 95px;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: #ff005c;
+    }
+
+    .content-container {
+      padding-top: 120px;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .about-section h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      line-height: 1.8;
+      color: #f5f5f5;
+    }
+
+    .skills-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .skill-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: scale(1.05);
+    }
+
+    .skill-box i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+      color: #ffcc00;
+    }
+
+    .skill-box .skill-title {
+      font-weight: bold;
+      color: #ffcc00;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .social-icons {
+      margin-top: 60px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
+<body>
 
-<body class="portfolio-details-page">
-
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+  <header>
+    <h1 class="sitename">Jhansi Lakshmi</h1>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/1cNAIM7i1cfqaLMn1i3jfZjg8piycj2n1/view?usp=sharing">Resume</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
         
-        <h1 class="sitename">Jhansi Lakshmi</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" >About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          
-          
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <div class="header-social-links">
-        <a href="https://www.linkedin.com/in/jhansikommalapati" target="_blank">
-          <i class="bi bi-linkedin"></i>
-      </a>
-      
-      <a href="mailto:jhansikommalapati45@gmail.com">
-        <i class="bi bi-envelope"></i>
-    </a>
-      </div>
-
-    </div>
+      </ul>
+    </nav>
   </header>
 
-  <main class="main">
+  <div id="about-root" class="content-container"></div>
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
+  <script>
+    const aboutContent = `
+     
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Project Details</h2>
-        
-      </div><!-- End Section Title -->
-
-      
-
-          
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Computer Vision & NLP Integration</li>
-                <i class="bi bi-chevron-right"></i> <strong>Link:</strong> <span>https://colab.research.google.com/drive/12lFjVlM-qQpd8kcWEu4SyeMCfFobyRSk?usp=sharing</span>
-                 
-              </ul>
-            
-            
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              
-              <h2>Image Captioning with Conditioned LSTM Generators</h2>
-              
-              
-              <p>
-                • Developed and implemented a Visual Question Answering (VQA) system using deep learning and Deep Neural 
-Network methodologies <br>
-                • Preprocessed and trained on extensive datasets to achieve high accuracy metrics in image understanding tasks.<br>
-                • Integrated model architecture that combines visual and textual features with attention mechanisms for enhanced 
-                performance.<br>
-                • Demonstrated proficiency in training, evaluation, and inference processes to analyze images and generate meaningful 
-                responses.<br>
-              </p>
-            </div>
-          </div>
-
+      <div class="skills-section">
+        <div class="skill-box">
+          <i class="bi bi-code-slash"></i>
+          <span class="skill-title">Programming Languages:</span>
+          Java, Python, JavaScript, TypeScript
         </div>
-
+        <div class="skill-box">
+          <i class="bi bi-laptop"></i>
+          <span class="skill-title">Front-End:</span>
+          Angular, React, Redux, Bootstrap, jQuery, AJAX, JSON, HTML5, CSS3, SASS
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-hdd-rack"></i>
+          <span class="skill-title">Back-End:</span>
+          Spring Boot, Spring MVC, Hibernate, JPA, Node.js, RESTful APIs, SOAP, Microservices, Spring Cloud
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-database"></i>
+          <span class="skill-title">Databases:</span>
+          MySQL, PostgreSQL, MongoDB, Oracle
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-cloud"></i>
+          <span class="skill-title">Cloud Platforms:</span>
+          AWS (EC2, S3, Lambda), Azure
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-git"></i>
+          <span class="skill-title">Version Control & Tools:</span>
+          Git, GitHub, Jira, IntelliJ IDEA, VSCode, Eclipse
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-shield-lock"></i>
+          <span class="skill-title">Security Compliance:</span>
+          OAuth 2.0, JWT, SSL/TLS Encryption, Spring Security, HTTPS, CORS
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-check-circle"></i>
+          <span class="skill-title">Testing:</span>
+          JUnit, Mockito, Selenium, Postman, Cypress
+        </div>
+        <div class="skill-box">
+          <i class="bi bi-diagram-3"></i>
+          <span class="skill-title">Architecture:</span>
+          Microservices, MVC, RESTful services, SOAP
+        </div>
       </div>
 
-      <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-        
-        <ul>
-          <li><strong>Category</strong>: Data Science, Predictive Analytics</li>
-          
-        </ul>
-      
-      
-      <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-        
-        <h2>Black Friday Sales Prediction</h2>
-        
-        <p>
-          • Collected and cleaned historical sales data, and performed exploratory data analysis (EDA) using Power BI, 
-          identifying trends, correlations, and key factors driving Black Friday sales. <br>
-          • Engineered new features, such as customer lifetime value and product popularity scores, to enhance the predictive 
-          model's accuracy.<br>
-          • Tested and trained various machine learning algorithms (e.g., Random Forest, Linear Regression) to select the most 
-          accurate model for forecasting sales, fine-tuning it using evaluation metrics like RMSE.<br> 
-          • Developed interactive dashboards in Power BI to present predictive insights, enabling businesses to optimize 
-          inventory, marketing strategies, and revenue during the Black Friday season. 
-        </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jhansikommalapati" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:jhansikommalapati45@gmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="bi bi-github"></i></a>
       </div>
-    </div>
+    `;
 
-  </div>
-
-
-</div>
-<div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-  
-  <ul>
-    <li><strong>Category</strong>: Autonomous Driving using Computer Vision</li>
-    
-  </ul>
-
-
-<div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-  
-  <h2>Advanced Parking System</h2>
-  
-  <p>
-    • Utilized OpenCV for edge detection and filtering to identify lane markings in real-time video feeds. <br>
-• Implemented the Hough Transform algorithm to detect lane lines, integrating sensor data for enhanced accuracy. <br>
-• Trained a machine learning model with TensorFlow/PyTorch to analyze vehicle position relative to detected lanes. <br>
-• Conducted extensive testing and optimization using Python, C, high-resolution cameras, and ultrasonic sensors to 
-ensure system reliability and performance in diverse driving conditions and driver assistance.<br>
-  </p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-
-    </section><!-- /Portfolio Details Section -->
-
-  </main>
-
-  <footer id="footer" class="footer light-background">
-
-    
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.linkedin.com/in/jhansikommalapati" target="_blank">
-          <i class="bi bi-linkedin"></i>
-      </a>
-      
-      <a href="mailto:jhansikommalapati45@gmail.com">
-        <i class="bi bi-envelope"></i>
-    </a>
-      </div>
-      <div class="credits">
-        
-       
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    document.getElementById('about-root').innerHTML = aboutContent;
+  </script>
 
 </body>
-
 </html>

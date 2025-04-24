@@ -7,14 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       font-family: 'Roboto Mono', monospace;
       background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #3a0ca3);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: white;
-      margin: 0;
-      padding: 0;
+      min-height: 100vh;
     }
 
     @keyframes gradientBG {
@@ -44,7 +49,7 @@
     .navmenu ul {
       list-style: none;
       display: flex;
-      gap: 95px;
+      gap: 60px;
     }
 
     .navmenu ul li a {
@@ -56,41 +61,54 @@
 
     .navmenu ul li a:hover,
     .navmenu ul li a.active {
-      color: #ff005c;
+      color: #ffcc00;
     }
 
-    .project-categories {
-      padding-top: 140px;
+    .content-container {
+      padding-top: 120px;
       text-align: center;
     }
 
-    .project-categories h1 {
+    h1 {
+      font-size: 3rem;
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.8rem;
       margin-bottom: 40px;
+      text-shadow: 0 0 8px rgba(255,255,255,0.3);
     }
 
-    .category-buttons {
+    .project-buttons {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 50px;
       flex-wrap: wrap;
+      padding: 20px;
     }
 
-    .category-buttons a {
+    .project-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-decoration: none;
-      font-weight: bold;
-      padding: 15px 30px;
-      background: #ff005c;
       color: white;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      transition: transform 0.3s ease, background 0.3s;
+      transition: transform 0.3s ease;
     }
 
-    .category-buttons a:hover {
+    .project-btn img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      margin-bottom: 12px;
+    }
+
+    .project-btn span {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .project-btn:hover {
       transform: scale(1.1);
-      background: #ff3366;
     }
   </style>
 </head>
@@ -102,21 +120,32 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="https://drive.google.com/file/d/1cNAIM7i1cfqaLMn1i3jfZjg8piycj2n1/view?usp=sharing">Resume</a></li>
         <li><a href="experience.html">Experience</a></li>
-        <li><a href="portfolio.html" class="active">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="https://drive.google.com/file/d/1cNAIM7i1cfqaLMn1i3jfZjg8piycj2n1/view?usp=sharing">Resume</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="project-categories">
-    <h1>Explore My Projects</h1>
-    <div class="category-buttons">
-      <a href="web-projects.html">Web Development</a>
-      <a href="ds-projects.html">Data Structures</a>
-      <a href="ml-projects.html">Machine Learning</a>
+  <div class="content-container">
+    <h1>My Projects</h1>
+    <div class="project-buttons">
+      <a href="web-development.html" class="project-btn">
+        <img src="images/web-dev.png" alt="Web Development Projects" />
+        <span>Web Development</span>
+      </a>
+
+      <a href="data-structures.html" class="project-btn">
+        <img src="images/data-structures.png" alt="Data Structures Projects" />
+        <span>Data Structures</span>
+      </a>
+
+      <a href="machine-learning.html" class="project-btn">
+        <img src="images/machine-learning.png" alt="Machine Learning Projects" />
+        <span>Machine Learning</span>
+      </a>
     </div>
-  </section>
+  </div>
 
 </body>
 </html>

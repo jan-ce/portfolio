@@ -9,7 +9,129 @@
   <style>
     * {
       margin: 0;
+      padding: 0;<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Jhansi Lakshmi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #3a0ca3);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      margin: 0;
       padding: 0;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .sitename {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 95px;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: #ff005c;
+    }
+
+    .project-categories {
+      padding-top: 140px;
+      text-align: center;
+    }
+
+    .project-categories h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .category-buttons a {
+      text-decoration: none;
+      font-weight: bold;
+      padding: 15px 30px;
+      background: #ff005c;
+      color: white;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .category-buttons a:hover {
+      transform: scale(1.1);
+      background: #ff3366;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="sitename">Jhansi Lakshmi</h1>
+    <nav class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://drive.google.com/file/d/1cNAIM7i1cfqaLMn1i3jfZjg8piycj2n1/view?usp=sharing">Resume</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="portfolio.html" class="active">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="project-categories">
+    <h1>Explore My Projects</h1>
+    <div class="category-buttons">
+      <a href="web-projects.html">Web Development</a>
+      <a href="ds-projects.html">Data Structures</a>
+      <a href="ml-projects.html">Machine Learning</a>
+    </div>
+  </section>
+
+</body>
+</html>
+
       box-sizing: border-box;
     }
 

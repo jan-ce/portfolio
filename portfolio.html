@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Jhansi Lakshmi</title>
+  <title>About | Jhansi Lakshmi</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
@@ -14,31 +15,31 @@
     }
 
     html, body {
+      min-height: 100%;
       font-family: 'Roboto Mono', monospace;
+      color: white;
       background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #3a0ca3);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
-      color: white;
-      min-height: 100vh;
+      scroll-behavior: smooth;
     }
 
     @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 5px 10px;
+      padding: 20px 40px;
       background: rgba(0, 0, 0, 0.3);
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
-      
     }
 
     .sitename {
@@ -68,17 +69,10 @@
 
     .content-container {
       padding-top: 120px;
-      text-align: center;
+      text-align: centre;
     }
 
-    h1 {
-      font-size: 3rem;
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 40px;
-      text-shadow: 0 0 8px rgba(255,255,255,0.3);
-    }
-
-    .project-buttons {
+   .project-buttons {
       display: flex;
       justify-content: center;
       gap: 50px;
@@ -112,25 +106,42 @@
     .project-btn:hover {
       transform: scale(1.1);
     }
+
+    .social-icons {
+      margin-top: 60px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1 class="sitename">Jhansi Lakshmi</h1>
-    <nav class="navmenu">
+    <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="https://drive.google.com/file/d/1cNAIM7i1cfqaLMn1i3jfZjg8piycj2n1/view?usp=sharing">Resume</a></li>
         <li><a href="experience.html">Experience</a></li>
-         <li><a href="https://drive.google.com/file/d/1cNAIM7i1cfqaLMn1i3jfZjg8piycj2n1/view?usp=sharing">Resume</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-       
+        <li><a href="portfolio.html">Projects</a></li>
+        
       </ul>
     </nav>
   </header>
 
- <div class="content-container">
+  <div class="content-container">
     <h1>My Projects</h1>
     <div class="project-buttons">
       <a href="web-development.html" class="project-btn">
@@ -148,6 +159,5 @@
         <span>Machine Learning</span>
       </a>
     </div>
-
 </body>
 </html>

@@ -19,7 +19,7 @@
       animation: gradientBG 15s ease infinite;
       color: white;
       min-height: 100vh;
-      padding-top: 120px;
+      padding-top: 140px; /* Increased to avoid overlapping */
     }
 
     @keyframes gradientBG {
@@ -32,17 +32,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      background: rgba(0, 0, 0, 0.3);
+      padding: 25px 40px;
+      background: rgba(0, 0, 0, 0.5);
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
+      backdrop-filter: blur(6px);
     }
 
     .sitename {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #ffffff;
       text-shadow: 0 0 5px rgba(255,255,255,0.3);
     }
@@ -50,14 +51,17 @@
     .navmenu ul {
       list-style: none;
       display: flex;
-      gap: 60px;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
     .navmenu ul li a {
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
+      font-size: 1rem;
       transition: color 0.3s;
+      padding: 5px 10px;
     }
 
     .navmenu ul li a:hover,
@@ -131,6 +135,26 @@
 
     .github-link:hover {
       background-color: #e6004e;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 768px) {
+      .navmenu ul {
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .sitename {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
